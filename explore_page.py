@@ -59,8 +59,8 @@ def load_data():
     df = df[df["ConvertedComp"].notnull()]
     df = df.dropna()
     df = df[df["Employment"] == "Employed full-time"]
-    df = df.drop("Employment", axis=1)"""
-    #df = pd.read_csv("survey_results_public.csv")
+    df = df.drop("Employment", axis=1)
+    df = pd.read_csv("survey_results_public.csv")"""
     df=df.rename({'ConvertedCompYearly':"Salary"},axis=1)
     df = df[df["Salary"].notnull()]
     df = df[["Country",'Age','RemoteWork','Employment','EdLevel','YearsCodePro','Salary']]
